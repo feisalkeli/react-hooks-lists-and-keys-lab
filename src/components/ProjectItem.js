@@ -1,13 +1,13 @@
 import React from "react";
 
-function ProjectItem({ name, about, technologies }) {
+function ProjectItem(props) {
+  console.log(props);
   return (
     <div className="project-item">
-      <h3>{name}</h3>
-      <p>{about}</p>
+      <h3>{props.name}</h3>
+      <p>{}</p>
       <div className="technologies">
         {/* render a <span> for each technology in the technologies array */}
-        <span>{technologies}</span>
       </div>
     </div>
   );
