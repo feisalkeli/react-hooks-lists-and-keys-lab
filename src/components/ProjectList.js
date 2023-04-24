@@ -18,14 +18,14 @@ function ProjectList({ projects }) {
     <div id="projects">
       <h2>My Projects</h2>
       <div id="project-list">
-        <ProjectItem
-          technologies={projects.map((user) => {
-            <div key={user.id}></div>;
-            <span>{user.name}</span>;
-            <span>{user.about}</span>;
-            <span>{user.technologies}</span>;
-          })}
-        />
+        {projects.map((user) => {
+          <ProjectItem
+            key={user.id}
+            name={user.name}
+            about={user.about}
+            technologies={user.technologies}
+          />;
+        })}
       </div>
     </div>
   );
